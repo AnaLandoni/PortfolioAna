@@ -4,21 +4,19 @@ import './Footer.css';
 
 
 const Footer = () => {
-    const [Likes, setLikes] = useState(0);
-    const sumar = () => {
-        setLikes((currentState1) => {
-            return currentState1 ? 0 : 1;
-        });
+  
+    const [Send, setSend] = useState(0);
+    const sumarsend = () => {
+        return setSend(Send+1);
     };
     return(
-        <div id="manolike" className="footer">
-            <button className="btnlike" onClick={sumar}><i class="bi bi-hand-thumbs-up-fill manolike"></i></button>
-            <h2 className='cv'>Curriculum</h2>
-            <div className='cuentas'>
-                <h5><i className="bi bi-hand-thumbs-up-fill cvicono"></i>{Likes}</h5>
-                <h5><i className="bi bi-eye-fill cvicono"></i>0</h5>
-                <h5><i className="bi bi-chat-left-fill cvicono iconomsj"></i>0</h5>
-            </div>        
+        <div id="footermsj">
+             <form action="https://formspree.io/f/xbjegzjn" method="post">
+                <div className="msj">
+                    <textarea name="mensaje" id="mensaje" className="mensaje" placeholder="Tu mensaje"></textarea>
+                    <button type="submit" className="enviar" onClick={sumarsend}>Enviar</button>
+                </div>
+            </form>
         </div>
     )
 }

@@ -8,8 +8,7 @@ const Header = () => {
         <div className="perfil">
         <div >
             <h1 className="nombre">Landoni</h1>
-            <h1 className="apellido">Ana Laura In<span className="letra">és</span></h1>
-            
+            <h1 className="apellido">Ana Laura Inés</h1>  
         </div>
         
         <div className="textoperfil">
